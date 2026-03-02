@@ -21,9 +21,7 @@
       --urgent: #d94f3d;
       --whatsapp: #25d366;
     }
-
     * { box-sizing: border-box; }
-
     body {
       font-family: 'DM Sans', sans-serif;
       background-color: var(--bg);
@@ -31,10 +29,8 @@
       min-height: 100vh;
       overflow-x: hidden;
     }
-
     .font-display { font-family: 'Fraunces', serif; }
-
-    .bg-pattern {
+     .bg-pattern {
       position: fixed;
       inset: 0;
       z-index: 0;
@@ -43,7 +39,6 @@
         radial-gradient(ellipse 60% 40% at 80% 100%, rgba(217, 79, 61, 0.1) 0%, transparent 50%),
         var(--bg);
     }
-
     .floating-orb {
       position: absolute;
       border-radius: 50%;
@@ -51,7 +46,6 @@
       opacity: 0.4;
       animation: float 20s ease-in-out infinite;
     }
-
     .orb-1 {
       width: 300px;
       height: 300px;
@@ -59,7 +53,6 @@
       top: 10%;
       left: -5%;
     }
-
     .orb-2 {
       width: 200px;
       height: 200px;
@@ -68,13 +61,11 @@
       right: -3%;
       animation-delay: -7s;
     }
-
     @keyframes float {
       0%, 100% { transform: translate(0, 0) scale(1); }
       33% { transform: translate(30px, -30px) scale(1.1); }
       66% { transform: translate(-20px, 20px) scale(0.95); }
     }
-
     .paw-prints {
       position: fixed;
       inset: 0;
@@ -83,22 +74,18 @@
       opacity: 0.03;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath fill='%23f5f0e8' d='M30 35c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5zm-8-5c-1.5 0-2.7 1.2-2.7 2.7s1.2 2.7 2.7 2.7 2.7-1.2 2.7-2.7-1.2-2.7-2.7-2.7zm16 0c-1.5 0-2.7 1.2-2.7 2.7s1.2 2.7 2.7 2.7 2.7-1.2 2.7-2.7-1.2-2.7-2.7-2.7zm-12-4c-1.3 0-2.3 1-2.3 2.3s1 2.3 2.3 2.3 2.3-1 2.3-2.3-1-2.3-2.3-2.3zm8 0c-1.3 0-2.3 1-2.3 2.3s1 2.3 2.3 2.3 2.3-1 2.3-2.3-1-2.3-2.3-2.3z'/%3E%3C/svg%3E");
     }
-
     .content {
       position: relative;
       z-index: 10;
     }
-
     .urgent-banner {
       background: linear-gradient(90deg, var(--urgent), #c44132);
       animation: pulse-banner 2s ease-in-out infinite;
     }
-
     @keyframes pulse-banner {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.85; }
     }
-
     .photo-container {
       position: relative;
       border-radius: 24px;
@@ -107,7 +94,6 @@
         0 25px 50px -12px rgba(0, 0, 0, 0.5),
         0 0 0 1px var(--border);
     }
-
     .photo-container::before {
       content: '';
       position: absolute;
@@ -121,18 +107,15 @@
       mask-composite: exclude;
       pointer-events: none;
     }
-
     .photo-container img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.5s ease;
     }
-
     .photo-container:hover img {
       transform: scale(1.05);
     }
-
     .lost-badge {
       position: absolute;
       top: 16px;
@@ -146,24 +129,20 @@
       letter-spacing: 0.05em;
       animation: badge-pulse 1.5s ease-in-out infinite;
     }
-
     @keyframes badge-pulse {
       0%, 100% { box-shadow: 0 0 0 0 rgba(217, 79, 61, 0.5); }
       50% { box-shadow: 0 0 0 10px rgba(217, 79, 61, 0); }
     }
-
     .info-card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 16px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .info-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.3);
     }
-
     .btn-primary {
       background: var(--whatsapp);
       color: white;
@@ -179,15 +158,12 @@
       cursor: pointer;
       text-decoration: none;
     }
-
     .btn-primary:hover {
       background: #20bd5a;
       transform: translateY(-2px);
       box-shadow: 0 10px 30px -5px rgba(37, 211, 102, 0.4);
     }
-
     .btn-primary:active { transform: translateY(0); }
-
     .btn-secondary {
       background: var(--accent);
       color: var(--bg);
@@ -203,13 +179,11 @@
       cursor: pointer;
       text-decoration: none;
     }
-
     .btn-secondary:hover {
       background: var(--accent-hover);
       transform: translateY(-2px);
       box-shadow: 0 10px 30px -5px rgba(232, 168, 73, 0.4);
     }
-
     .btn-outline {
       background: transparent;
       color: var(--fg);
@@ -225,12 +199,10 @@
       cursor: pointer;
       text-decoration: none;
     }
-
     .btn-outline:hover {
       border-color: var(--accent);
       background: rgba(232, 168, 73, 0.1);
     }
-
     .tag {
       background: rgba(232, 168, 73, 0.15);
       color: var(--accent);
@@ -242,42 +214,35 @@
       align-items: center;
       gap: 6px;
     }
-
     .reveal {
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.8s ease, transform 0.8s ease;
     }
-
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
-
     .btn-primary:focus-visible,
     .btn-secondary:focus-visible,
     .btn-outline:focus-visible {
       outline: 2px solid var(--accent);
       outline-offset: 2px;
     }
-
     @media (prefers-reduced-motion: reduce) {
       .floating-orb, .urgent-banner, .lost-badge { animation: none; }
       .reveal { opacity: 1; transform: none; transition: none; }
       .photo-container img { transition: none; }
     }
-
     .detail-item {
       display: flex;
       justify-content: space-between;
       padding: 12px 0;
       border-bottom: 1px solid var(--border);
     }
-
     .detail-item:last-child { border-bottom: none; }
     .detail-label { color: var(--muted); }
     .detail-value { font-weight: 600; text-align: right; }
-
     .map-preview {
       background: var(--bg-warm);
       border-radius: 12px;
@@ -285,11 +250,8 @@
       border: 1px solid var(--border);
       transition: all 0.3s ease;
     }
-
     .map-preview:hover { border-color: var(--accent); }
-
     .counter { font-variant-numeric: tabular-nums; }
-
     /* Tutor Photo Style */
     .tutor-photo {
       width: 64px;
@@ -307,7 +269,6 @@
     <div class="floating-orb orb-2"></div>
   </div>
   <div class="paw-prints"></div>
-
   <div class="content">
     <div class="urgent-banner py-3 px-4 text-center">
       <p class="text-white font-semibold text-sm tracking-wide flex items-center justify-center gap-2">
@@ -317,7 +278,6 @@
         PERDIDO DESDE 15 DE JANEIRO DE 2026 - AJUDE-NOS A ENCONTRAR
       </p>
     </div>
-
     <main class="max-w-5xl mx-auto px-4 py-8 md:py-12">
       <header class="text-center mb-10 reveal" data-delay="0">
         <h1 class="font-display text-4xl md:text-6xl font-black mb-3 tracking-tight">
@@ -325,7 +285,6 @@
         </h1>
         <p class="text-[var(--muted)] text-lg">Este garoto precisa voltar para casa</p>
       </header>
-
       <div class="grid lg:grid-cols-5 gap-8">
         <div class="lg:col-span-2 reveal" data-delay="100">
           <div class="photo-container aspect-[4/5]">
@@ -336,7 +295,6 @@
             >
             <div class="lost-badge">PERDIDO</div>
           </div>
-          
           <div class="grid grid-cols-3 gap-3 mt-4">
             <div class="info-card p-4 text-center">
               <div class="text-2xl font-display font-bold text-[var(--accent)] counter">3</div>
@@ -352,7 +310,6 @@
             </div>
           </div>
         </div>
-
         <div class="lg:col-span-3 space-y-6">
           <!-- Dog info card -->
           <div class="info-card p-6 reveal" data-delay="200">
@@ -365,7 +322,6 @@
               </div>
               <h2 class="font-display text-2xl font-bold">TICO E TECA</h2>
             </div>
-
             <div class="space-y-1">
               <div class="detail-item">
                 <span class="detail-label">Raca</span>
@@ -388,7 +344,6 @@
                 <span class="detail-value">Nao possui</span>
               </div>
             </div>
-
             <div class="mt-4 pt-4 border-t border-[var(--border)]">
               <p class="text-sm text-[var(--muted)] mb-2">Caracteristicas especiais:</p>
               <div class="flex flex-wrap gap-2">
@@ -398,7 +353,6 @@
               </div>
             </div>
           </div>
-
           <!-- Last seen card -->
           <div class="info-card p-6 reveal" data-delay="300">
             <div class="flex items-center gap-3 mb-4">
@@ -410,12 +364,10 @@
               </div>
               <h3 class="font-display text-xl font-bold">Ultima vez visto</h3>
             </div>
-
             <p class="text-[var(--muted)] mb-4">
               Av. Paulista, 1578 - Bela Vista, Sao Paulo - SP, perto do Shopping Center 3. 
               Por volta das 14h30 do dia 15/01/2025.
             </p>
-
             <a href="https://share.google/Vu73I1z4gI4tdWVMp" 
                target="_blank" 
                rel="noopener noreferrer"
@@ -441,7 +393,6 @@
               </div>
             </a>
           </div>
-
           <!-- Owner card with photo -->
           <div class="info-card p-6 reveal" data-delay="400">
             <div class="flex items-center gap-4 mb-5">
@@ -456,7 +407,6 @@
                 <p class="text-[var(--muted)] text-sm">Tutor do Tico e Teca</p>
               </div>
             </div>
-
             <div class="space-y-1 mb-5">
               <div class="detail-item">
                 <span class="detail-label">Telefone</span>
@@ -467,7 +417,6 @@
                 <span class="detail-value">Av Brasil N°04 - Coroadinho, São Luis- MA</span>
               </div>
             </div>
-
             <div class="flex flex-col sm:flex-row gap-3">
               <a href="https://wa.me/5598988248877?text=Ol%C3%A1!%20Vi%20o%20an%C3%BAncio%20do%20cachorro%20perdido%20TICO%20e%20TECA%20.%20Acho%20que%20o%20encontrei!" 
                  target="_blank" 
@@ -485,7 +434,6 @@
                 Ligar
               </a>
             </div>
-
             <div class="mt-4">
               <a href="https://share.google/Vu73I1z4gI4tdWVMp" 
                  target="_blank" 
@@ -501,7 +449,6 @@
           </div>
         </div>
       </div>
-
       <!-- Share section -->
       <section class="mt-12 text-center reveal" data-delay="500">
         <p class="text-[var(--muted)] mb-4">Ajude a divulgar este anuncio</p>
@@ -513,7 +460,6 @@
             </svg>
             Copiar Link
           </button>
-          
           <!-- Instagram Button -->
           <button onclick="shareInstagram()" class="btn-outline" aria-label="Compartilhar no Instagram">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -523,7 +469,6 @@
             </svg>
             Instagram
           </button>
-          
           <button onclick="shareTwitter()" class="btn-outline" aria-label="Compartilhar no Twitter">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
@@ -534,28 +479,23 @@
         <p id="copyFeedback" class="text-[var(--accent)] mt-3 opacity-0 transition-opacity duration-300" aria-live="polite"></p>
       </section>
     </main>
-
     <footer class="text-center py-8 text-[var(--muted)] text-sm">
       <p>Feito com amor e esperanca de encontrar Thor</p>
       <p class="mt-2">Compartilhe este anuncio para ajudar</p>
     </footer>
   </div>
-
   <script>
     const pageData = {
       title: 'PROCURA-SE TICO E TECA - Cachorro Perdido',
       url: window.location.href,
       text: 'AJUDE! Cachorro perdido na Av. Paulista, Sao Paulo. Golden Retriever, responde por Thor. Contato: (98) 98824-8877'
     };
-
     function initRevealAnimations() {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      
       if (prefersReducedMotion) {
         document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
         return;
       }
-
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -565,23 +505,19 @@
           }
         });
       }, { threshold: 0.1 });
-
       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     }
-
     function showFeedback(message) {
       const feedback = document.getElementById('copyFeedback');
       feedback.textContent = message;
       feedback.style.opacity = '1';
       setTimeout(() => feedback.style.opacity = '0', 3000);
     }
-
     function copyLink() {
       navigator.clipboard.writeText(pageData.url).then(() => {
         showFeedback('Link copiado!');
       });
     }
-
     function shareInstagram() {
       // Instagram não suporte compartilhamento direto via URL como Facebook/Twitter
       // A melhor experiência é copiar o link e orientar o usuário
@@ -589,13 +525,11 @@
         showFeedback('Link copiado! Abra o Instagram para colar.');
       });
     }
-
     function shareTwitter() {
       const text = encodeURIComponent(pageData.text);
       const url = encodeURIComponent(pageData.url);
       window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'width=600,height=400');
     }
-
     document.addEventListener('DOMContentLoaded', initRevealAnimations);
   </script>
 </body>
