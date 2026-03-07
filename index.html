@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>TICO & TECA · DESAPARECIDOS · São Luís/MA</title>
+  <title>TICO & TECA DESAPARECIDOS São Luís/MA</title>
   <meta name="description" content="Fox Paulistinha perdidos no Coroadinho. Ajude a encontrar. RECOMPENSA R$500. Contato direto via WhatsApp.">
   
   <!-- Open Graph / redes -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://achatieteca.com.br">
-  <meta property="og:title" content="🆘 Tico e Teca desaparecidos — RECOMPENSA R$500">
+  <meta property="og:title" content="Tico e Teca desaparecidos — RECOMPENSA R$500">
   <meta property="og:description" content="Dois irmãos, mesma pelagem, sumiram juntos. Ajude a encontrar e ganhe recompensa.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=1200&auto=format">
   
@@ -291,17 +291,10 @@
         <p class="text-[#a8a29e] text-lg mt-2">Dois irmãos, mesma alma. Perdidos no Coroadinho · São Luís/MA</p>
       </div>
       <div class="flex gap-2 no-print">
+        <!-- data de desaparecimento corrigida para 15/01/2026 → contador dinâmico -->
         <span class="bg-[#fbbf2410] border border-[#fbbf2430] px-5 py-2 rounded-full text-sm font-semibold days-counter">📅 52 dias</span>
         <span class="bg-[#f43f5e10] border border-[#f43f5e30] px-5 py-2 rounded-full text-sm font-semibold">🐕 5kg</span>
       </div>
-    </div>
-
-    <!-- RECOMPENSA EM DESTAQUE -->
-    <div class="glass-card p-5 mb-6 border-2 border-[#fbbf24] text-center no-print">
-      <span class="text-3xl">💰</span>
-      <h3 class="text-2xl font-black">RECOMPENSA</h3>
-      <p class="text-[#fbbf24] text-4xl font-black">R$ 500,00</p>
-      <p class="text-sm text-[#a8a29e]">Para quem encontrar com vida</p>
     </div>
 
     <!-- grid principal 2 colunas -->
@@ -333,7 +326,15 @@
                  class="gallery-thumb" data-full="https://images.unsplash.com/photo-1772918228025-22dff8fbef32?q=80&w=1227&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=800&auto=format" alt="Cachorro feliz" loading="lazy">
           </div>
 
-          <!-- minicards estatísticas interativas -->
+          <!-- RECOMPENSA ABAIXO DAS FOTOS -->
+          <div class="glass-card p-5 mt-5 border-2 border-[#fbbf24] text-center no-print">
+            <span class="text-3xl">💰</span>
+            <h3 class="text-2xl font-black">RECOMPENSA</h3>
+            <p class="text-[#fbbf24] text-4xl font-black">R$ 500,00</p>
+            <p class="text-sm text-[#a8a29e]">Para quem encontrar com vida</p>
+          </div>
+
+          <!-- minicards estatísticas interativas (dias, kg, anos) -->
           <div class="grid grid-cols-3 gap-3 mt-5 text-center">
             <div class="bg-[#1c1917] p-4 rounded-2xl border border-[#2f2a26]">
               <div class="text-3xl font-black text-[#fbbf24] days-counter">52</div>
@@ -361,10 +362,10 @@
             <h2 class="text-2xl font-black tracking-tight">Irmãos de pelagem</h2>
           </div>
           <div class="grid grid-cols-2 gap-4 text-sm">
-            <div><span class="text-[#a8a29e] block">Raça</span> <span class="font-bold">Fox Paulistinha</span></div>
+            <div><span class="text-[#a8a29e] block">Raça</span> <span class="font-bold">Fox Paulistinha (SRD)</span></div>
             <div><span class="text-[#a8a29e] block">Pelagem</span> <span class="font-bold">Branco c/ preto</span></div>
-            <div><span class="text-[#a8a29e] block">Coleiras</span> <span class="font-bold text-[#f97316]">Preta/Verde com NFC</span></div>
-            <div><span class="text-[#a8a29e] block">Microchip</span> <span class="font-bold">não</span></div>
+            <div><span class="text-[#a8a29e] block">Coleiras</span> <span class="font-bold text-[#f97316]">Preta/Verde</span></div>
+            <div><span class="text-[#a8a29e] block">Microchip</span> <span class="font-bold">NFC na Coleira</span></div>
           </div>
           <div class="mt-5 flex flex-wrap gap-2">
             <span class="bg-[#2f2a26] px-4 py-2 rounded-full text-xs font-semibold">🔴 muito dóceis</span>
@@ -506,13 +507,13 @@
   <script>
     // ========== CONFIGURAÇÕES INICIAIS ==========
     const tutorNumber = '5598988248877';
-    const startDate = new Date('2026-01-15');
+    // DATA CORRETA: 15 DE JANEIRO DE 2026
+    const startDate = new Date('2026-01-15T14:30:00');
     
     // ========== CONTADOR DE VISUALIZAÇÕES ==========
     function updateViewCounter() {
       let views = localStorage.getItem('pageViews');
       if (!views) {
-        // Primeira visita: começa com 1247 (base) + 1
         views = 1247;
         localStorage.setItem('pageViews', views);
       } else {
@@ -520,7 +521,6 @@
         localStorage.setItem('pageViews', views);
       }
       
-      // Formatar número (ex: 1247 -> 1.2k, 15234 -> 15k)
       let displayViews;
       if (views >= 1000) {
         displayViews = (views / 1000).toFixed(1) + 'k';
@@ -547,6 +547,7 @@
     // ========== ATUALIZAR CONTADOR DE DIAS ==========
     function updateDaysCounter() {
       const today = new Date();
+      // Remove diferenças de fuso horário, garantindo contagem correta
       const diffTime = Math.abs(today - startDate);
       const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
       document.querySelectorAll('.days-counter').forEach(el => {
@@ -649,16 +650,12 @@
       const encodedMessage = encodeURIComponent(message);
       const whatsappUrl = `https://wa.me/${tutorNumber}?text=${encodedMessage}`;
       
-      // Mostrar modal
       document.getElementById('notificationModal').classList.add('active');
       
-      // Abrir WhatsApp
       window.open(whatsappUrl, '_blank');
       
-      // Limpar formulário
       document.getElementById('sightingFormWhatsApp').reset();
       
-      // Simular notificação
       if (Notification.permission === 'granted') {
         new Notification('🐾 Mensagem enviada!', {
           body: 'Obrigado por ajudar a encontrar Tico e Teca!',
@@ -677,10 +674,10 @@
           text: 'Ajude a encontrar esses dois fox paulistinha perdidos no Coroadinho. RECOMPENSA R$500!',
           url: window.location.href
         }).catch(() => {
-          copyLink(); // fallback
+          copyLink();
         });
       } else {
-        copyLink(); // fallback
+        copyLink();
       }
     };
 
